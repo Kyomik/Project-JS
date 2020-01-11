@@ -1,8 +1,5 @@
-function tampilkan(n){
-    if(n === 0) return;
-    console.log(n);
-    return tampilkan(n-1);
+function faktorial(n){
+    if(n === 0) return 1;
+    return n * faktorial(n-1);
 }
-
-tampilkan(10);
-
+console.log("faktorial dari " + 10 + " : " + faktorial(5));
