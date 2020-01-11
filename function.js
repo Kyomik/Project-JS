@@ -13,4 +13,4 @@ function menghitung2Kubus(kubus1, kubus2){
 
 var hasil = menghitung2Kubus(menghitungKubus(kubus1), menghitungKubus(kubus2));
 
-alert(hasil);
+console.log(hasil);
