@@ -1,16 +1,11 @@
+kasus menghitung 2 volume kubus 
 var kubus1 = 8;
 var kubus2 = 3;
 
-function menghitungKubus(kubus){
-    var hasil =  kubus * kubus * kubus;
-    return hasil;
+function menghitungKubus(a, b){
+    return a * a * a + b * b * b;
 }
 
-function menghitung2Kubus(kubus1, kubus2){
-    var hasil = kubus1 + kubus2;
-    return hasil;
-}
+alert(menghitungKubus(kubus1, kubus2));
 
-var hasil = menghitung2Kubus(menghitungKubus(kubus1), menghitungKubus(kubus2));
 
-console.log(hasil);
