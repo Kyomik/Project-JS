@@ -1,11 +1,8 @@
-kasus menghitung 2 volume kubus 
-var kubus1 = 8;
-var kubus2 = 3;
-
-function menghitungKubus(a, b){
-    return a * a * a + b * b * b;
+function tampilkan(n){
+    if(n === 0) return;
+    console.log(n);
+    return tampilkan(n-1);
 }
 
-alert(menghitungKubus(kubus1, kubus2));
-
+tampilkan(10);
 
