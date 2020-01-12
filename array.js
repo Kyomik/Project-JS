@@ -1,21 +1,19 @@
 var arr = ['Kyoo', 'Luci', 'Nofa'];
 
-console.log(("Isi Array pada saat pertama kali : " + arr.join()));
+console.log("Array saat pertama kali : " + arr.join());
 
-arr.push('Kuki', 'Cotto');
+arr.splice(1, 2, 'Cute', "iku");
 
-console.log("Saat di manipulasi dgn method2 array : ");
+console.log("Setelah di modifikasi : ");
+console.log(arr.join());
 
-console.log((arr.join()));
+arr.splice(2, 0, "TOy", "Cut");
+console.log(arr.join());
 
-arr.pop();
+var arr2 = [];
 
-console.log((arr.join()));
+console.log("Array ke2 pertama kali : " + arr2.join());
 
-arr.unshift('Cerry', 'Riska');
+var arr2 = arr.slice(1,4);
 
-console.log((arr.join()));
-
-arr.shift();
-
-console.log((arr.join()));
+console.log("Setelah di slice : " + arr2.join());
