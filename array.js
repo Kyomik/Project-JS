@@ -1,19 +1,13 @@
-var arr = ['Kyoo', 'Luci', 'Nofa'];
+var arr = [9, 8, 3, 5, 6, 6];
 
-console.log("Array saat pertama kali : " + arr.join());
+console.log("Data saat pertama kali : ");
 
-arr.splice(1, 2, 'Cute', "iku");
+arr.forEach(function(e, i){
+     console.log('Data - ' + (i + 1) + ' : ' + e);
+ });
 
-console.log("Setelah di modifikasi : ");
-console.log(arr.join());
+ var arr2 = arr.map(function(e){
+    return e * 2; 
+});
 
-arr.splice(2, 0, "TOy", "Cut");
-console.log(arr.join());
-
-var arr2 = [];
-
-console.log("Array ke2 pertama kali : " + arr2.join());
-
-var arr2 = arr.slice(1,4);
-
-console.log("Setelah di slice : " + arr2.join());
+console.log("Data arr di tampung ke arr2 skaligus x 2 : " + arr2.join());
