@@ -1,13 +1,44 @@
-var arr = [9, 8, 3, 5, 20, 52, 90, 6, 6];
+var penumpang = [];
 
-var cari = prompt("pencarian data : ");
+var tambahPenumpang = function(namaPenumpang, penumpang){
+    if(penumpang.length == 0){
+        penumpang.push(namaPenumpang);
 
-console.log(arr.filter(function(e){
-    return e > cari;
-}));
+        return penumpang;
+    }else{
+        for(var i = 0; i < penumpang.length; i++){
+            if(penumpang[i] == undefined){
+                penumpang[i] = namaPenumpang;
 
-var pencarian = arr.find(function(x){
-    return x == cari
-})
+                return penumpang;
+            }
+            else if(penumpang[i] == namaPenumpang){
+                console.log(namaPenumpang + "Sufdah ada didalam angkot");
 
-console.log("Nilai yang diambil : " + pencarian);
+                return penumpang;
+            }
+            else if(i == penumpang.length - 1){
+                penumpang.push(namaPenumpang);
+
+                return penumpang;
+            }
+        }
+    }
+}
+
+var hapusPenumpang = function(namaPenumpang, penumpang){
+    if(penumpang.length == 0){
+        console.log("Angkot masih kosong..");
+    
+    }else{
+        for(var i = 0; i < penumpang.length; i++){
+            if(penumpang[i] == namaPenumpang){
+                penumpang[i] = undefined;
+                return penumpang
+            }else if( i == penumpang.length - 1){
+                console.log(namaPenumpang + "Tidak ada");
+            }
+        }
+    }
+    return penumpang;
+}
