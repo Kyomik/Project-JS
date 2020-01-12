@@ -1,13 +1,9 @@
-var arr = [9, 8, 3, 5, 6, 6];
+var arr = [9, 8, 3, 5, 20, 52, 90, 6, 6];
 
-console.log("Data saat pertama kali : ");
+console.log("Data saat pertama kali : " + arr.join(' - '));
 
-arr.forEach(function(e, i){
-     console.log('Data - ' + (i + 1) + ' : ' + e);
- });
-
- var arr2 = arr.map(function(e){
-    return e * 2; 
+arr.sort(function(a, b){
+    return a - b;
 });
 
-console.log("Data arr di tampung ke arr2 skaligus x 2 : " + arr2.join());
+console.log("Data setelah diurut : " + arr.join(' - '));
