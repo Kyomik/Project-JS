@@ -1,9 +1,13 @@
 var arr = [9, 8, 3, 5, 20, 52, 90, 6, 6];
 
-console.log("Data saat pertama kali : " + arr.join(' - '));
+var cari = prompt("pencarian data : ");
 
-arr.sort(function(a, b){
-    return a - b;
-});
+console.log(arr.filter(function(e){
+    return e > cari;
+}));
 
-console.log("Data setelah diurut : " + arr.join(' - '));
+var pencarian = arr.find(function(x){
+    return x == cari
+})
+
+console.log("Nilai yang diambil : " + pencarian);
